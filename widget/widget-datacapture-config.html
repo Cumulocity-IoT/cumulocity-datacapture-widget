@@ -1,0 +1,29 @@
+<div class="p-16">
+  <h3>Data capture widget</h3>
+
+  <div class="card">
+    <div class="card-header separator">
+      <h4 class="card-title">Select datapoint to enter value:</h4>
+    </div>
+
+    <div class="card-block">
+      <c8y-form-group class="m-b-0">
+      <label class="c8y-checkbox">
+        <input type="checkbox" name ="addAudit" [(ngModel)]="config.addAudit"/>
+        <span></span>
+        <span>Add audit information to measurements</span>
+        </label>
+      </c8y-form-group>
+    </div>
+    <div class="card-block">
+      <button class="btn btn-primary" (click)="addDatapoints()">
+        Select data points
+      </button>
+    </div>
+  </div>
+  <div
+    class="card-inner-scroll d-flex d-col bg-component"
+    style="height: 350px"
+  >
+  </div>
+</div>

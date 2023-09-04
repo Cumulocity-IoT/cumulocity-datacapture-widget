@@ -1,0 +1,51 @@
+<div class="p-16">
+  <div class="card">
+    <div class="card-header separator">
+      <h4 class="card-title">Enter values for datapoints</h4>
+    </div>
+
+    <div class="card-block">
+      <div *ngFor="let d of config.datapoints; let i = index">
+        <div class="form-group">
+          <label>{{d.__target.id}} - {{d.__target.name}} - {{d.label}}</label>
+          <div class="row">
+            <form>
+              <div class="col-lg-4">
+                <input
+                  class="form-control"
+                  type="datetime-local"
+                  [name]="'dates_' + i"
+                  [(ngModel)]="dates[i]"
+                  style="width: 80%"
+                />
+              </div>
+              <div class="col-lg-4">
+                <input
+                  class="form-control"
+                  placeholder="measurement value, e.g.10.25"
+                  type="text"
+                  [name]="'values_' + i"
+                  [(ngModel)]="values[i]"
+                  style="width: 80%; text-align: right"
+                />
+              </div>
+              <div class="col-lg-4">
+                <button
+                  class="btn btn-default"
+                  type="button"
+                  (click)="onSubmit(i)"
+                >
+                  Create Measurement
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="card-inner-scroll d-flex d-col bg-component"
+      style="height: 350px"
+    ></div>
+  </div>
+</div>
