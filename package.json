@@ -1,6 +1,6 @@
 {
   "name": "cumulocity-datacapture-widget",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cumulocity widget to capture measturements manually.",
   "repository": {
     "type": "git",
