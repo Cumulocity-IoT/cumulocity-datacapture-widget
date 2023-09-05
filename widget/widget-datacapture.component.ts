@@ -33,7 +33,7 @@ export class DataCaptureWidgetComponent implements OnInit {
     console.log("New config:", this.config);
     this.user$ = this.app.currentUser;
     this.user$.subscribe((u) => {
-      console.log("User", u);
+      //console.log("User", u);
       this.user = u.userName;
     });
   }

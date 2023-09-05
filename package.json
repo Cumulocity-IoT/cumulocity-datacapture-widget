@@ -1,6 +1,6 @@
 {
   "name": "cumulocity-datacapture-widget",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cumulocity widget to capture measturements manually.",
   "repository": {
     "type": "git",
@@ -50,7 +50,7 @@
   },
   "c8y": {
     "application": {
-      "name": "cumulocity-datacapture-widget",
+      "name": "Datacapture Widget",
       "description": "Custom widget with data capture",
       "contextPath": "sag-ps-pkg-datacapture-widget",
       "key": "sag-ps-pkg-datacapture-widget-key",

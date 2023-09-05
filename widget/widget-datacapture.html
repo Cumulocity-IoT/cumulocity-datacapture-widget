@@ -5,6 +5,59 @@
     </div>
 
     <div class="card-block">
+      <table class="table table-condensed table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name Device</th>
+            <th>Datapoint</th>
+            <th>Date</th>
+            <th>Value</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of config.datapoints; let i = index">
+            <!-- <form> -->
+              <td>{{d.__target.id}}</td>
+              <td>{{d.__target.name}}</td>
+              <td>{{d.label}}</td>
+              <td>
+                <input
+                  class="form-control"
+                  bsDatepicker [bsConfig]="{ customTodayClass: 'today' , withTimepicker: true, initCurrentTime: true, keepDatepickerOpened: true, dateInputFormat: 'DD:MM:YYYY, HH:mm:ss.SSS' }"
+                  [name]="'dates_' + i"
+                  placeholder="Date"
+                  [(ngModel)]="dates[i]"
+                  style="width: 100%"
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  placeholder="measurement value, e.g.10.25"
+                  type="number"
+                  [name]="'values_' + i"
+                  pattern="[0-9]*[.,]?[0-9]*"
+                  [(ngModel)]="values[i]"
+                  style="width: 100%; text-align: right"
+                />
+              </td>
+              <td>
+                <button
+                  class="btn btn-default"
+                  type="button"
+                  (click)="onSubmit(i)"
+                >
+                  Create Measurement
+                </button>
+              </td>
+            <!-- </form> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <div class="card-block">
       <div *ngFor="let d of config.datapoints; let i = index">
         <div class="form-group">
           <label>{{d.__target.id}} - {{d.__target.name}} - {{d.label}}</label>
@@ -42,7 +95,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div
       class="card-inner-scroll d-flex d-col bg-component"
       style="height: 350px"

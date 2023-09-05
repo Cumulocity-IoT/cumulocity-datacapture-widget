@@ -6,20 +6,28 @@ import { DataCaptureWidgetComponent } from "./widget-datacapture.component";
 import { DataCaptureWidgetConfig } from "./widget-datacapture-config.component";
 import { FormsModule, hookComponent, gettext } from "@c8y/ngx-components";
 import { ContextWidgetConfig } from "@c8y/ngx-components/context-dashboard";
+import { BsDatepickerConfig } from "ngx-bootstrap/datepicker";
+import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
+import { TimepickerModule } from "ngx-bootstrap/timepicker";
 
 @NgModule({
   declarations: [DataCaptureWidgetComponent, DataCaptureWidgetConfig],
   entryComponents: [DataCaptureWidgetComponent, DataCaptureWidgetConfig],
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    BsDatepickerModule.forRoot(),
+    TimepickerModule.forRoot(),
+  ],
   exports: [],
   providers: [
+    BsDatepickerConfig,
     hookComponent({
       id: "angular.widget.plugin",
       label: gettext("Data capture widget"),
       description: gettext("Widget added data capture"),
       component: DataCaptureWidgetComponent,
       previewImage: assetPaths.previewImage,
-
       configComponent: DataCaptureWidgetConfig,
       /** new Angular-Dashboard definition */
       data: {
@@ -30,6 +38,8 @@ import { ContextWidgetConfig } from "@c8y/ngx-components/context-dashboard";
             options: {
               noDeviceTarget: true, // Set this to true to hide the AngularJS device selector.
               groupsSelectable: false, // Set this, if not only devices should be selectable.
+              noNewWidgets: false,
+              deviceTargetNotRequired: false,
             },
           },
         },
