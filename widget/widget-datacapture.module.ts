@@ -9,6 +9,7 @@ import { ContextWidgetConfig } from "@c8y/ngx-components/context-dashboard";
 import { BsDatepickerConfig } from "ngx-bootstrap/datepicker";
 import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { TimepickerModule } from "ngx-bootstrap/timepicker";
+import { TranslateModule } from "@ngx-translate/core";
 
 @NgModule({
   declarations: [DataCaptureWidgetComponent, DataCaptureWidgetConfig],
@@ -18,6 +19,7 @@ import { TimepickerModule } from "ngx-bootstrap/timepicker";
     FormsModule,
     BsDatepickerModule.forRoot(),
     TimepickerModule.forRoot(),
+    TranslateModule
   ],
   exports: [],
   providers: [
