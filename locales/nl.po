@@ -1,46 +1,48 @@
+# Translation by Chat GPT 3.5
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: c8y.plugin\n"
-"Language: de\n"
+"Language: nl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Data capture widget"
-msgstr "Manuelle Messwert eingabe"
+msgstr "Gegevensinvoegwidget"
 
 msgid "Select datapoint to enter value:"
-msgstr "Datenpunkt für Werteingabe auswählen:"
+msgstr "Selecteer gegevenspunt om waarde in te voeren:"
 
 msgid "Add audit information to measurements"
-msgstr "Audit Log für eingaben führen"
+msgstr "Auditinformatie toevoegen aan metingen"
 
 msgid "Select data points"
-msgstr "Datenpunkte auswählen"
+msgstr "Selecteer gegevenspunten"
 
 msgid "Create Measurement"
-msgstr "Messwert erstellen"
+msgstr "Meting maken"
 
-msgid "Action" 
-msgstr "Aktion"
+msgid "Action"
+msgstr "Actie"
 
 msgid "Value"
-msgstr "Wert"
+msgstr "Waarde"
 
 msgid "Date"
 msgstr "Datum"
 
 msgid "Datapoint"
-msgstr "Datenpunkt"
+msgstr "Gegevenspunt"
 
 msgid "Name Device"
-msgstr "Gerätename"
+msgstr "Apparaatnaam"
 
 msgid "Enter values for datapoints"
-msgstr "Messwerte für Datenpunkte eingeben"
+msgstr "Voer waarden in voor gegevenspunten"
 
 msgid "ID"
 msgstr "ID"
 
 msgid "measurement value, e.g.10.25"
-msgstr "Messwert, z.B. 10.25"
+msgstr "Meetwaarde, bijv.10.25"

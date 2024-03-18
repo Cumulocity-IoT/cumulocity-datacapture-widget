@@ -9,6 +9,7 @@ import { DataCaptureWidgetModule } from './widget/widget-datacapture.module';
 
 // Translations
 import './locales/de.po'; // <- adding additional strings to the german translation.
+import './locales/nl.po';
 
 @NgModule({
   imports: [
