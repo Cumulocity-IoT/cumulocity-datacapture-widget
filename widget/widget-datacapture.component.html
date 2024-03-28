@@ -5,7 +5,7 @@
     </div>
 
     <div class="card-block">
-      <table class="table table-condensed table-striped">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th>{{ "ID" | translate }}</th>
@@ -19,9 +19,9 @@
         <tbody>
           <tr *ngFor="let d of config.datapoints; let i = index">
             <!-- <form> -->
-              <td>{{d.__target.id}}</td>
-              <td>{{d.__target.name}}</td>
-              <td>{{d.label}}</td>
+              <td class="p-t-18">{{d.__target.id}}</td>
+              <td class="p-t-18">{{d.__target.name}}</td>
+              <td class="p-t-18">{{d.label}}</td>
               <td>
                 <input
                   class="form-control"
