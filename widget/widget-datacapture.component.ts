@@ -1,19 +1,12 @@
 import { Component, Input, OnInit } from "@angular/core";
-import {
-
-  IMeasurementCreate,
-  IUser,
-  InventoryService,
-  MeasurementService,
-} from "@c8y/client";
+import { IMeasurementCreate, IUser, MeasurementService } from "@c8y/client";
 import { BehaviorSubject } from "rxjs";
 import { AlertService, AppStateService } from "@c8y/ngx-components";
 
 @Component({
   selector: "c8y-widget-datacapture",
-  templateUrl: "widget-datacapture.html",
-  styleUrls: [
-    "./widget-datacapture.component.css"],
+  templateUrl: "widget-datacapture.component.html",
+  styleUrls: ["./widget-datacapture.component.css"],
 })
 export class DataCaptureWidgetComponent implements OnInit {
   @Input() config;
@@ -23,7 +16,6 @@ export class DataCaptureWidgetComponent implements OnInit {
   user: string;
 
   constructor(
-    private inventory: InventoryService,
     private measurement: MeasurementService,
     private alert: AlertService,
     private app: AppStateService
@@ -36,6 +28,10 @@ export class DataCaptureWidgetComponent implements OnInit {
       //console.log("User", u);
       this.user = u.userName;
     });
+    for (let index = 0; index < this.config["datapoints"].length; index++) {
+      this.dates.push(new Date());
+      // this.values.push(0);
+    }
   }
 
   async onSubmit(index: number) {
@@ -46,13 +42,15 @@ export class DataCaptureWidgetComponent implements OnInit {
       this.dates,
       this.config.datapoints[index]
     );
-    const time  = this.dates[index]?this.dates[index]  : new Date().toISOString();
+    const time = this.dates[index]
+      ? this.dates[index]
+      : new Date().toISOString();
     const m: Partial<IMeasurementCreate> = {
-      source :{
-        id:this.config.datapoints[index].__target.id,
+      source: {
+        id: this.config.datapoints[index].__target.id,
       },
-      type : this.config.datapoints[index].fragment,
-      time: time
+      type: this.config.datapoints[index].fragment,
+      time: time,
     };
     if (this.config.addAudit) {
       m.user = this.user;
@@ -73,7 +71,7 @@ export class DataCaptureWidgetComponent implements OnInit {
     }
     */
     console.log("New entry:", m);
-    const {res, data} = await this.measurement.create(m);
+    const { res, data } = await this.measurement.create(m);
     this.alert.success(`New measurement: ${data.id}`);
   }
 }

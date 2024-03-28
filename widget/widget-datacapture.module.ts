@@ -25,7 +25,7 @@ import { TranslateModule } from "@ngx-translate/core";
   providers: [
     BsDatepickerConfig,
     hookComponent({
-      id: "angular.widget.plugin",
+      id: "datacapture.widget",
       label: gettext("Data capture widget"),
       description: gettext("Widget added data capture"),
       component: DataCaptureWidgetComponent,

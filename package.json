@@ -1,6 +1,6 @@
 {
   "name": "cumulocity-datacapture-widget",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Cumulocity widget to capture measturements manually.",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "c8ycli server",
-    "start:cockpit": "npm start -- --shell cockpit-debug",
+    "start:cockpit": "npm start -- --shell cockpit-twin",
     "build": "c8ycli build",
     "build:ci": "npm run build -- --ci",
     "deploy": "c8ycli deploy",
@@ -28,9 +28,9 @@
     "@angular/platform-browser-dynamic": "14.0.6",
     "@angular/router": "14.0.6",
     "@angular/upgrade": "14.0.6",
-    "@c8y/client": "1017.0.267",
-    "@c8y/ngx-components": "1017.0.267",
-    "@c8y/style": "1017.0.267",
+    "@c8y/client": "1018.0.205",
+    "@c8y/ngx-components": "1018.0.205",
+    "@c8y/style": "1018.0.205",
     "@ngx-formly/core": "^6.1.8",
     "@ngx-translate/core": "14.0.0",
     "ngx-bootstrap": "9.0.0",
@@ -43,7 +43,7 @@
     "@angular/language-service": "14.0.6",
     "@angular/localize": "14.0.6",
     "@angular/service-worker": "14.0.6",
-    "@c8y/cli": "1017.0.267",
+    "@c8y/cli": "1018.0.205",
     "@semantic-release/changelog": "github:semantic-release/changelog",
     "@semantic-release/exec": "github:semantic-release/exec",
     "@semantic-release/git": "github:semantic-release/git",
@@ -76,7 +76,11 @@
         {
           "from": "README.md",
           "to": "README.md"
-        }
+        },
+        {
+            "from": "../assets/widget-datacapture-pr.png",
+            "to": "assets/widget-datacapture-pr.png"
+          }
       ],
       "remotes": {
         "sag-ps-pkg-widget-datacapture": [
