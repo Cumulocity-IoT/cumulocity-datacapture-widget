@@ -1,4 +1,4 @@
-# Cumulocity widget plugin
+# Cumulocity data capture widget
 
 This is a Cumulocity widget for data capturing. For a set of configured data points measurements can be manually created.
 The configuration page allows to select the data points and if audit information about the user should be added to the audit log.
