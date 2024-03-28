@@ -78,7 +78,7 @@
           "to": "README.md"
         },
         {
-            "from": "../assets/widget-datacapture-pr.png",
+            "from": "./assets/widget-datacapture-pr.png",
             "to": "assets/widget-datacapture-pr.png"
           }
       ],
