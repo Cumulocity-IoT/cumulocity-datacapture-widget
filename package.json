@@ -1,7 +1,7 @@
 {
   "name": "cumulocity-datacapture-widget",
   "version": "0.0.5",
-  "description": "Cumulocity widget to capture measturements manually.",
+  "description": "Cumulocity widget to capture measurements manually.",
   "repository": {
     "type": "git",
     "url": "git@github.com:SoftwareAG/cumulocity-datacapture-widget.git"
@@ -56,7 +56,7 @@
   "c8y": {
     "application": {
       "name": "Datacapture Widget",
-      "description": "Custom widget with data capture",
+      "description": "Custom widget to capture measurements",
       "contextPath": "sag-ps-pkg-datacapture-widget",
       "key": "sag-ps-pkg-datacapture-widget-key",
       "globalTitle": "Custom widget with data capture",
@@ -69,7 +69,7 @@
           "name": "Data capture widget",
           "module": "DataCaptureWidgetModule",
           "path": "./widget/widget-datacapture.module.ts",
-          "description": "Adds a custom widget to the shell application"
+          "description": "Custom widget to capture measurements"
         }
       ],
       "copy": [
@@ -78,9 +78,9 @@
           "to": "README.md"
         },
         {
-            "from": "./assets/widget-datacapture-pr.png",
-            "to": "assets/widget-datacapture-pr.png"
-          }
+          "from": "./assets/widget-datacapture-pr.png",
+          "to": "assets/widget-datacapture-pr.png"
+        }
       ],
       "remotes": {
         "sag-ps-pkg-widget-datacapture": [
